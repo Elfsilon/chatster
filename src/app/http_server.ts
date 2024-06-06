@@ -40,6 +40,6 @@ export class HttpAppServer {
   }
 
   listen() {
-    this.httpServer.listen(DEFAULT_PORT)
+    this.httpServer.listen(process.env.PORT || DEFAULT_PORT)
   }
 }

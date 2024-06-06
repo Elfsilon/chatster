@@ -1,10 +1,11 @@
 {
   "name": "chatster",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon"
+    "start:prod": "node dist/index.js",
+    "start:dev": "nodemon",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.6",

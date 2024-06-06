@@ -10,7 +10,7 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./out",
+    "outDir": "./dist",
     "paths": {
       "@src/*": [
         "./src/*"
