@@ -23,7 +23,9 @@ export class WebSocketAppServer {
   }
 
   private getConfiguration(): Partial<ServerOptions> {
-    return { cors: { origin: '*' } }
+    return {
+      cors: { origin: '*' },
+    }
   }
 
   private registerSocketHandlers(socket: Socket) {

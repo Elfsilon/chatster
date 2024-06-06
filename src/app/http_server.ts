@@ -1,4 +1,5 @@
 import { createServer, Server as HttpServer } from 'http'
+import { ExpressServer } from './express_server'
 
 const DEFAULT_PORT = 3000
 
@@ -9,8 +10,8 @@ export class HttpAppServer {
     return this.httpServer
   }
 
-  constructor() {
-    this.httpServer = createServer()
+  constructor(app: ExpressServer) {
+    this.httpServer = createServer(app.server)
     this.registerHttpEventHandlers()
   }
 

@@ -20,8 +20,6 @@ export interface ClientToServerEvents {
 
 export interface InterServerEvents {}
 
-export interface SocketData {
-  name: string
-}
+export interface SocketData {}
 
 export type SignallingSocket = Socket<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>
