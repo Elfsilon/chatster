@@ -2,10 +2,10 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package.json tsconfig.json ./
-RUN npm install
+COPY package.json tsconfig.json yarn.lock ./
+RUN yarn install
 
-COPY . ./
-RUN npm run build
+COPY ./src ./src
+RUN yarn run build
 
-CMD ["npm", "run", "start:prod"]
+CMD ["yarn", "start:prod"]
